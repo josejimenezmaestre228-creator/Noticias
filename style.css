@@ -1,0 +1,98 @@
+:root {
+  --bg: #f4f4f9;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --accent: #ff6f61;
+  --nav-bg: #333;
+  --nav-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: var(--accent);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background: var(--nav-bg);
+}
+
+.nav a {
+  color: var(--nav-text);
+  margin: 0 15px;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.latest ul {
+  list-style: none;
+  padding: 0;
+}
+
+.latest li {
+  margin-bottom: 10px;
+}
+
+.latest a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.latest a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+}
